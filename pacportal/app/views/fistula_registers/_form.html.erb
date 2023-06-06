@@ -1,0 +1,131 @@
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Cards</h1>
+                    </div>
+
+                    <div class="row">
+
+                     
+<%= form_with(model: fistula_register, local: true) do |form| %>
+  <% if fistula_register.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fistula_register.errors.count, "error") %> prohibited this fistula_register from being saved:</h2>
+
+      <ul>
+        <% fistula_register.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+
+
+  </div>
+</nav>
+
+<form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="Patient Name"
+                                            placeholder="Patient Names"><%= form.text_area :Name %>
+  
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Email Address">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                    </div>
+                                </div>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Register Account
+                                </a>
+                                <hr>
+                                <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Register with Google
+                                </a>
+                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                                </a>
+                            </form>
+
+    <%= form.label :Name %>
+    <%= form.text_area :Name %>
+  
+
+  <div class="field">
+    <%= form.label :Location %>
+    <%= form.text_area :Location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Region %>
+    <%= form.text_area :Region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Marital_status %>
+    <%= form.text_area :Marital_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Telephone %>
+    <%= form.text_area :Telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Next_of_Kin %>
+    <%= form.text_area :Next_of_Kin %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+<% end %>
+
+
+
+   
+
+                     
+   </div>
+
+
+                       
+
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+
+
+
+
